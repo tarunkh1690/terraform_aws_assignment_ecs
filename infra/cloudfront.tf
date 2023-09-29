@@ -28,7 +28,7 @@ resource "aws_cloudfront_distribution" "supermarket_distribution" {
   default_cache_behavior {
     target_origin_id = "supermarket-alb-origin"
     viewer_protocol_policy = "redirect-to-https"
-    allowed_methods  = ["GET", "HEAD", "OPTIONS"]
+    allowed_methods  = ["HEAD", "DELETE", "POST", "GET", "OPTIONS", "PUT", "PATCH"]
     cached_methods   = ["GET", "HEAD"]
     min_ttl          = 0
     default_ttl      = 3600
